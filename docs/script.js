@@ -6,7 +6,7 @@ document.getElementById('scareButton').addEventListener('click', function() {
     this.style.fontSize = (16 + clickCount * 3) + 'px';
     this.style.padding = (10 + clickCount * 5) + 'px';
 
-    if (clickCount === 3) { // Check if the button has been clicked three times
+    if (clickCount === 5) { // Check if the button has been clicked three times
         document.getElementById('content').style.display = 'none';
         const jumpScareDiv = document.getElementById('jumpScare');
         jumpScareDiv.classList.remove('hidden');
