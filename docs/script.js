@@ -1,5 +1,22 @@
 let clickCount = 0;
 
+function addRandomQuestionMarks() {
+    const container = document.getElementById('questionMarkContainer');
+    const numberOfQuestionMarks = 50; // Adjust as needed
+
+    for (let i = 0; i < numberOfQuestionMarks; i++) {
+        const questionMark = document.createElement('div');
+        questionMark.textContent = '?';
+        questionMark.style.position = 'absolute';
+        questionMark.style.left = Math.random() * 100 + '%';
+        questionMark.style.top = Math.random() * 100 + '%';
+        questionMark.style.fontSize = Math.random() * 20 + 10 + 'px'; // Random font size
+        questionMark.style.color = 'rgba(0, 0, 0, 0.5)'; // Semi-transparent black
+
+        container.appendChild(questionMark);
+    }
+}
+
 document.getElementById('scareButton').addEventListener('click', function() {
     clickCount++; // Increment click count each time the button is clicked
 
@@ -23,3 +40,4 @@ document.getElementById('scareButton').addEventListener('click', function() {
     }
 });
 
+addRandomQuestionMarks();
