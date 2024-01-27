@@ -12,6 +12,7 @@ document.getElementById('scareButton').addEventListener('click', function() {
         jumpScareDiv.classList.remove('hidden');
 
         const audio = document.getElementById('scareSound');
+        audio.volume = 1.0;
         audio.play();
 
         setTimeout(function() {
